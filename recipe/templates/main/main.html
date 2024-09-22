@@ -1,0 +1,231 @@
+{% extends 'authenticate/base.html' %}
+
+
+{% block content %}
+<style>
+    .row1 {
+        position: relative;
+        text-align: center;
+        width: auto;
+        overflow: hidden;
+    }
+
+    .row1 img {
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        color: #fff;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .overlay-text h1 {
+        font-size: 125px;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .txt {
+        font-size: 30px;
+        font-weight: bold;
+        color: #bbbbbb;
+    }
+
+    /* Full-width input fields */
+    input[type=text] {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        background: #f1f1f1;
+        border-radius: 20px;
+        /* Adds rounded corners */
+    }
+
+    input[type=text]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    input[type=text]::placeholder {
+        color: #000000;
+        font-weight: bold;
+    }
+
+    .nav-link {
+        color: rgb(255, 255, 255);
+ 
+    }
+
+    .nav-link:hover {
+        color: hsla(36, 87%, 35%, 0.63);
+    }
+
+    .border {
+        border-radius: 20px;
+        background-color: #865d32;
+        
+    }
+
+    .border:hover {
+        background-color: #ddd;
+    }
+
+    .btn-menu{
+        background-color: #865d32;
+        color: #ddd;
+    }
+
+    .btn-menu:hover{
+        background-color: #ddd;
+        color: #9f6e28;
+    }
+</style>
+
+    <div class="row row1">
+        <img src="..\static\media\cooking-frame4.jpg" alt="background" class="img-fluid">
+        <div class="overlay-text">
+            <h1 class="h1">Virtual Chef</h1>
+            <p class="txt">Explore our vast collection of over 80,000 recipes</p>
+            <input type="text" id="searchInput" placeholder="What's your craving today?" name="search">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3 ">
+            <div class="container mt-5">
+                <ul class="nav flex-column text-black">
+                    <li class="nav-item mt-3 border p-1">
+                        <a class="nav-link" href="#section1"><b>Breakfast</b></a>
+                    </li>
+                    <li class="nav-item mt-3 border p-1">
+                        <a class="nav-link" href="#"><b>Main course</b></a>
+                    </li>
+                    <li class="nav-item mt-3 border p-1">
+                        <a class="nav-link" href="#"><b>Dinner</b></a>
+                    </li>
+                    <li class="nav-item mt-3 border p-1">
+                        <a class="nav-link" href="#"><b>Dessert</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-9 mt-5" id="section1">
+            <div class="row">
+                <!-- First Card -->
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width:100%">
+                        <img class="card-img-top"
+                            src="https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/38/YUeirxMLQaeE1h3v3qnM_229%20berry%20blue%20frzn%20dess.jpg"
+                            alt="Card image" style="width:100%; height:600px; object-fit: cover;">
+                        <div class="card-body">
+                            <h4 class="card-title">John Doe</h4>
+                            <p class="card-text">Some example text some example text. John Doe is an architect and
+                                engineer.</p>
+                            <a href="#" class="btn btn-menu">See Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Card -->
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width:100%">
+                        <img class="card-img-top"
+                            src="https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/28/86/weSmFrIQUKeGo9vqy7Ug_9EF6F42F-B888-470B-B19A-7EF4DEAF08F7.jpeg"
+                            alt="Card image" style="width:100%; height:600px; object-fit: cover;">
+                        <div class="card-body">
+                            <h4 class="card-title">John Doe</h4>
+                            <p class="card-text">Some example text some example text. John Doe is an architect and
+                                engineer.</p>
+                            <a href="#" class="btn btn-menu">See Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Card -->
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width:100%">
+                        <img class="card-img-top"
+                            src="https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/30/53/pic3OtSfM.jpg"
+                            alt="Card image" style="width:100%; height:600px; object-fit: cover;">
+                        <div class="card-body">
+                            <h4 class="card-title">John Doe</h4>
+                            <p class="card-text">Some example text some example text. John Doe is an architect and
+                                engineer.</p>
+                            <a href="#" class="btn btn-menu">See Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Fourth Card -->
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width:100%">
+                        <img class="card-img-top"
+                            src="https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/recipes/54/13/80/Qjfc6oF7TOIKkm1mZKmA_rc_rt014-prime-rib-roast-with-rosemary-thyme-au-jus-BLOG-1080x610.png"
+                            alt="Card image" style="width:100%; height:600px; object-fit: cover;">
+                        <div class="card-body">
+                            <h4 class="card-title">John Doe</h4>
+                            <p class="card-text">Some example text some example text. John Doe is an architect and
+                                engineer.</p>
+                            <a href="#" class="btn btn-menu">See Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fifth Card -->
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width:100%">
+                        <img class="card-img-top"
+                            src="https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/submissions/recipe/2002817949/trjcSTHoTUO9UqkQ2Gim_Steamed%20Carrot%20Cake%201.jpg"
+                            alt="Card image" style="width:100%; height:600px; object-fit: cover;">
+                        <div class="card-body">
+                            <h4 class="card-title">John Doe</h4>
+                            <p class="card-text">Some example text some example text. John Doe is an architect and
+                                engineer.</p>
+                            <a href="#" class="btn btn-menu">See Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sixth Card -->
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width:100%">
+                        <img class="card-img-top"
+                            src="https://img.sndimg.com/food/image/upload/w_555,h_416,c_fit,fl_progressive,q_95/v1/img/submissions/recipe/2002835253/bYojOuciRlivAYv5GSai_Thumbnail.jpg"
+                            alt="Card image" style="width:100%; height:600px; object-fit: cover;">
+                        <div class="card-body">
+                            <h4 class="card-title">John Doe</h4>
+                            <p class="card-text">Some example text some example text. John Doe is an architect and
+                                engineer.</p>
+                            <a href="#" class="btn btn-menu">See Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Add event listener for the input field
+        document.getElementById('searchInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {  // Detect "Enter" key press
+                // Scroll to Section 1 when "Enter" is pressed
+                document.getElementById('section1').scrollIntoView({
+                    behavior: 'smooth'  // Smooth scrolling effect
+                });
+            }
+        });
+    </script>
+
+
+    {% endblock %}
